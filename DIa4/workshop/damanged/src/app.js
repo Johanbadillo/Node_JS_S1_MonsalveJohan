@@ -1,4 +1,6 @@
 import { OrderServiceLegacy } from "./legacy/orderService_legacy.js";
+import { fileDb } from "./infra/fileDb.js";
+
 
 const svc = new OrderServiceLegacy();
 
@@ -10,3 +12,4 @@ const order = svc.createOrder({
 });
 
 console.log("Order OK:", order);
+console.log(fileDb.list())
